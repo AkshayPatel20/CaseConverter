@@ -109,6 +109,7 @@ export const Navbar = () => {
       dispatch(logout({user_id: ''}))
     };
   
+    
     // console.log(user.photoURL);
   return <>
 
@@ -189,53 +190,54 @@ export const Navbar = () => {
             </Box>
 
           {
-       
-          (user.user_id === undefined || user.user_id === '') ? <Button color="inherit" onClick={signInWithGoogle}>Login</Button> : <Box sx={{ flexGrow: 0 }}>
-            <Tooltip title="Open settings">
-           
-             
-              <StyledBadge  onClick={handleOpenUserMenu}
-                overlap="circular"
-                anchorOrigin={{ vertical: 'bottom', horizontal: 'right' }}
-                variant="dot"
-              >
-                <Avatar alt={user.username} src={user.photoURL} sx={{ bgcolor: deepOrange[500] }} 
-                 style={{backgroundColor: '#EC407A', color: '#FFFFFF'}}
-                />
-              </StyledBadge>
+            
+          
+          (user.user_id === undefined || user.user_id === '') ? <Button style={{ display: 'none' }} color="inherit"  onClick={signInWithGoogle}>Login</Button> : <Box sx={  { flexGrow: 0 }}>
+              <Tooltip title="Open settings">
+            
+              
+                <StyledBadge  onClick={handleOpenUserMenu}
+                  overlap="circular"
+                  anchorOrigin={{ vertical: 'bottom', horizontal: 'right' }}
+                  variant="dot"
+                >
+                  <Avatar alt={user.username} src={user.photoURL} sx={{ bgcolor: deepOrange[500] }} 
+                  style={{backgroundColor: '#EC407A', color: '#FFFFFF'}}
+                  />
+                </StyledBadge>
 
-            </Tooltip>
-            <Menu
-              sx={{ mt: '45px' }}
-              id="menu-appbar"
-              anchorEl={anchorElUser}
-              anchorOrigin={{
-                vertical: 'top',
-                horizontal: 'right',
-              }}
-              keepMounted
-              transformOrigin={{
-                vertical: 'top',
-                horizontal: 'right',
-              }}
-              open={Boolean(anchorElUser)}
-              onClose={handleCloseUserMenu}
-            >
-             
-                <MenuItem>
-                  <Typography textAlign="center">Profile</Typography>
-                </MenuItem>
-                <MenuItem>
-                  <Typography textAlign="center">Account</Typography>
-                </MenuItem>
-                <MenuItem>
-                  <Typography textAlign="center">Dashboard</Typography>
-                </MenuItem>
-                <MenuItem>
-                  <Typography textAlign="center" onClick={userLogout}>Logout</Typography>
-                </MenuItem>
-             
-            </Menu>
+              </Tooltip>
+              <Menu
+                sx={{ mt: '45px' }}
+                id="menu-appbar"
+                anchorEl={anchorElUser}
+                anchorOrigin={{
+                  vertical: 'top',
+                  horizontal: 'right',
+                }}
+                keepMounted
+                transformOrigin={{
+                  vertical: 'top',
+                  horizontal: 'right',
+                }}
+                open={Boolean(anchorElUser)}
+                onClose={handleCloseUserMenu}
+              >
+              
+                  <MenuItem>
+                    <Typography textAlign="center">Profile</Typography>
+                  </MenuItem>
+                  <MenuItem>
+                    <Typography textAlign="center">Account</Typography>
+                  </MenuItem>
+                  <MenuItem>
+                    <Typography textAlign="center">Dashboard</Typography>
+                  </MenuItem>
+                  <MenuItem>
+                    <Typography textAlign="center" onClick={userLogout}>Logout</Typography>
+                  </MenuItem>
+              
+              </Menu>
           </Box> }
         </Toolbar>
       </Container>

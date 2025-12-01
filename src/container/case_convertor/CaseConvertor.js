@@ -206,7 +206,7 @@ function CaseConvertor() {
 
         <div className='row'>
             <div className='col-md-10 mb-2 mt-4' style={{textAlign:'center'}}>
-                <h5 className='text-danger'>FEATURES : CASE CONVERTOR APP, GOOGLE LOGIN </h5>
+                {/* <h5 className='text-danger'>FEATURES : CASE CONVERTOR APP, GOOGLE LOGIN </h5> */}
             </div>
         </div>
 

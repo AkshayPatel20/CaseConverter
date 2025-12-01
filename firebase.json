@@ -1,11 +1,17 @@
 {
   "hosting": {
-    "site": "caseconverter-akshaypatel20",
     "public": "build",
+    "site": "caseconverter-akshaypatel20",
     "ignore": [
       "firebase.json",
       "**/.*",
       "**/node_modules/**"
+    ],
+    "rewrites": [
+      {
+        "source": "**",
+        "destination": "/index.html"
+      }
     ]
   }
 }
