@@ -13,7 +13,10 @@ We welcome contributions from the community. Please follow these guidelines:
 Author
 This project was created by Akshay Patel.
 
+TECH STACK
+REACT | FIREBASE 
+
 ### Screenshot
-![Website Screenshot](https://www.site-shot.com/cached_image/cWR3VPZjEe6DAAJCrBEABA)
+![Website Screenshot](https://portfolio-akshaypatel.web.app/img/life-ease.png)
 
 
